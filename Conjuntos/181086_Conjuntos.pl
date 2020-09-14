@@ -47,7 +47,7 @@ sub pertenencia(){
 	}
 }
 
-#Convertir a un conjuntos
+#Convertir a un conjunto
 sub transformar(){
 	my @A = (1,2,3); #arreglo
 	my $ConjuntoA = Set::Scalar -> new(@A); #conjunto
