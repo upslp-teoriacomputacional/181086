@@ -60,8 +60,7 @@ $conjuntoA -> insert(9); #inserta el elemento 9 en el conjuntoA
 
 ```
 
-
-Para imprimir el conjunto basta con utilizar un simple
+Para imprimir el conjunto basta con utilizar
 ```perl
 print($conjuntoA);
 ```
