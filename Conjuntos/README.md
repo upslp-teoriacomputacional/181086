@@ -4,7 +4,7 @@
   Obtener Set::Scalar <a href="https://metacpan.org/pod/Set::Scalar" target="\_blank"> (CPAN's Set::Scalar official page).
 
 #### Conjuntos
-#### (Última actualización: 13-09-2020)
+#### (Última actualización: 14-09-2020)
 Con la inclusión de Set::Scalar en Perl, la utilización de conjuntos se vuelve trivial y existen varias funcionalidades que podemos utilizar de un modo realmente sencillo. 
 Aunque existen otros métodos de trabajar conjuntos tales como los llamados hashes, realizar las operaciones requeridas se volvería innecesariamente complicado.
 
@@ -35,6 +35,18 @@ my $conjuntoA = Set::Scalar -> new (1,2,3);
 ```
 Esa instrucción estaría generando un conjunto llamado conjuntoA cuyos elementos son 1, 2 y 3
 
+También podemos verificar que un elemento se encuentre dentro del conjunto que estamos utilizando
+```perl
+$conjuntoA -> has($elemento);
+```
+
+Así como también podemos generar un conjunto a partir de un arreglo
+
+```perl
+my @arreglo = (1,2,3,4,5);
+my conjuntoA= Set::Scalar -> new(@arreglo);
+```
+
 Si es necesario manipular los conjuntos se puede hacer con las siguientes instrucciones:
 
 ```perl
@@ -47,6 +59,7 @@ $conjuntoA = conjuntoB -> copy(); #esta instrucción copia todo el contenido del
 $conjuntoA -> insert(9); #inserta el elemento 9 en el conjuntoA
 
 ```
+
 
 Para imprimir el conjunto basta con utilizar un simple
 ```perl
