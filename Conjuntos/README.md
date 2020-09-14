@@ -81,7 +81,8 @@ Sin embargo tuve problemas mostrando esto en pantalla utilizando Perl, en otro l
 pero en Perl, esto no ocurrió. 
 Para solucionar este problema utilicé estructuras condicionales IF en el código para mostrar un mensaje en pantalla en caso de que devuelvan true o que devuelvan false
 
-####Nota: 
+#### Nota: 
+
 Al final del código simplemente se usan las funciones previamente desarrolladas con el propósito de verificar su funcionamiento
 pueden comentarse y descomentarse según convenga para observar la manera en la que cada una se ejecuta.
 
