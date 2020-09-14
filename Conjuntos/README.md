@@ -89,10 +89,10 @@ pueden comentarse y descomentarse según convenga para observar la manera en la 
 
 ## Información
 
-Universidad Politécnica de San Luis Potosí
-Escrito por: Rodrigo Alejandro Ortiz Muñiz - 181086
-Profesor: Juan Carlos Gonzáles Ibarra
-Materia: Teoría computacional.
+Universidad Politécnica de San Luis Potosí <p>
+Escrito por: Rodrigo Alejandro Ortiz Muñiz - 181086 <p>
+Profesor: Juan Carlos Gonzáles Ibarra <p>
+Materia: Teoría computacional. <p>
 
 
 ## License
