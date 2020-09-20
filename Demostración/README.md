@@ -94,10 +94,10 @@ This would be due to perl's impossibility of determining if a value is false or 
 
 ## Information
 
-Universidad Politécnica de San Luis Potosí
-Written by: Rodrigo Alejandro Ortiz Muñiz - 181086
-Professor: Juan Carlos Gonzáles Ibarra
-Assignature: Teoría computacional.
+Universidad Politécnica de San Luis Potosí <p>
+Written by: Rodrigo Alejandro Ortiz Muñiz - 181086 <p>
+Professor: Juan Carlos Gonzáles Ibarra <p>
+Assignature: Teoría computacional. <p>
 
 
 ## License
