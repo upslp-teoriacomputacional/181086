@@ -1,94 +1,49 @@
-## Tables of truth 
-### (Last updated: 20-09-2020)
-The objective of the programm is to generate tables of truth for the operators OR, AND, NOT and XOR, also known as exclusive OR
-It accomplishes that by using for loops, the list containing the boolean values, or in this case, the 0 and 1, is used for this process. 
-every sequence of embeded for's runs by the list and takes its elements as an input that is used to provide an output depending on the operator used
+## Deterministic Finite Automata
+### (Last updated: 05-10-2020)
+The objective of the programm is to generate a simple DFA, in which only a string consisting of a number from 0 to 9, an operator such as +, -, *, or / and another digit from 0 to 9, is valid. This is made possible because of the matching operators avaliable on Perl.
 
 
-#### Program to generate tables of truth for the operators OR, AND, NOT and Exclusive OR
-  <li>In this code we start by declaring a list that according to my research is actually a way to declare a regular array in perl</li>
-  <li> This list has two elements, 0 and 1, while in the source code from python the values were false and true, both booleans
-  in perl we don't have those boolean values, and almost any value is considered true, therefore we need a false value, that being 0</li>
+#### Program to generate a DFA 
+  <li>In this code we start by declaring two global variables, this are necesary due to the nature of what we're doing.</li>
+  <li>We have four subroutines: 
+	<ul> <li>caracter: this subroutine determines the value of the variable simbolo, and wether or not the character sent is a digit or an operator</li>
+		<li> encabezado: it only prints on screen the upper part of the table</li>
+		<li> contenido: it prints the value of each variable to fill the table</li>
+		<li> body: prints lines to make the table prettier</li>
+	</ul>
+  </li>  
   
-##### using a new kind of for
 
-Before doing this, i never knew there was a different structure of the for instruction, other than foreach. 
-In this code, however, i had a hard time getting the python instruction 
-```python
-for x in booleanos
+#### using match in perl:
+
+Truth be told, this was one of the hardest programs i've made, not because is complex, but because all the information about the proper syntax to use the match operator in perl and its options and modifiers is confusing to the extreme. 
+
+even though the official site says that you need to use something like
+```perl
+$character =~ m/[0-9]/
 ```
-used to run by each element of the list.
-I understood the way it worked, but didn't know the right syntax, fortunately, i found out that the correct instruction 
-to replace those python lines from the source code was:
+
+what you actually need to use is 
 
 ```perl
-for $x (@booleanos)
+$character =~ m/^[0-9]*$/
 ```
-this instruction let me adapt the python source code correctly. This was by far the greates issue i had while doing this programm
+which one can only guess by experimenting using each of the modifiers known to man, such as p, m, d, s, ^ and so on.
 
-
-
-#### OR, AND, NOT and XOR:
-
-The general layout of every one of the tables was as follows: 
-
+That doesn't come close to the absoute horror that is understanding the way metacharacters work, since + is a metacharacter if we use 
 ```perl
-print("\n\nTruth table for OR: \n");
-print("| x\t| y\t| x or y|\n");
-print('-------------------------');
-print("\n");
-for $x (@booleanos){
-	for $y (@booleanos){
-		print("| ",$x);
-		print("\t| ");
-		print($y);
-		print("\t| ");
-		### print(  The desired operator  );
-		print("\t|\n");
-	}
-}
+$character =~ /+/
 ```
-in the line where the desired operator should be printed is the one that changes most of the time.
-
-for OR it would be: 
+the program wont know what we're trying to say, because + is used in other ways, so we need to add a \ before
 ```perl
-print($x or $y);
+$character =~ /\+/
+```
+which can get really confusing when you add | to represent OR and several other operators
+```perl
+$character =~ /\+|\-|\*|\//
 ```
 
-for AND it would be: 
-```perl
-print($x and $y);
-```
-
-for XOR it would be: 
-```perl
-print($x ^ $y);
-```
-
-The NOT table was very different, instead of using a for with an embeded for in it, we only use one
-also, in the source code there was only the need of directly printing everything, like in the previous examples.
-in perl however, when the program should return a 0 or a false value, it doesn't seem to return anything, at least not in a printable way, that's what happened in the NOT table
-the way i managed to solve this so every result was to be printed i used an if structure:
-```perl
-print("\n\nTruth table for NOT: \n");
-print("| x\t| not x |\n");
-print('-----------------');
-print("\n");
-for $x (@booleanos){
-		print("| ",$x);
-		print("\t| ");
-		if((not $x)== 0){
-			print(0);
-		}else{
-			print(not $x);
-		}
-		print("\t| \n");
-}
-```
-one thing to note on the program's output is that the tables are filled with ones and zeroes, instead of "true" and "false" values
-in a way, this is perl's version of that.
-It would have been much harder to try to use strings for true and false. In the exclusive OR and the NOT tables there would have been several errors.
-This would be due to perl's impossibility of determining if a value is false or true, not even the string "false" is false, almost everything is considered true, only a 0 or an undefined value are false.
+Using the match operator properly was by far the greatest challenge in the development of this code.
 
 
 
