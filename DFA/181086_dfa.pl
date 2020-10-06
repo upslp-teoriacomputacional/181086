@@ -39,9 +39,9 @@ sub caracter{
 			if($char eq $Fin){
 				return 2;
 			}else{
-				#i found out that we needed to implement a second else using the exit function for this to work properly, otherwise strings like 3+e would be valid, and they are not.
-				#exit();
+				#i found out that we needed to implement a second else returning 1 and making estado = 3 so that the value taken from the table is an E and know that the string is invalid.
 				$estado = 3;
+				$simbolo = "No valido";
 				return 1	;
 			}
 		}
