@@ -102,5 +102,5 @@ if($estado==3){
 }
 
 
-
+#update: tables should look a lot better now
 
