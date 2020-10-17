@@ -3,7 +3,7 @@
 The objective of the programm is to generate a NFA which allows to please the regular expression a*ba*
 To my understanding, a*ba* means that there can be any number of a's and then a b, followed by any number of a's afterwards.
 Using JFlap i came to the conclusion that it could be achieved using the following NFA:
-<img src="images.png" alt="NFA for a*ba*">
+<img src="image.png" alt="NFA for a*ba*">
  
   <li>I made this based on the last program i made, which was used to generate a DFA.</li>
   <li>The main differences are: 
