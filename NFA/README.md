@@ -3,7 +3,7 @@
 The objective of the programm is to generate a NFA which allows to please the regular expression a*ba*
 To my understanding, a*ba* means that there can be any number of a's and then a b, followed by any number of a's afterwards.
 Using JFlap i came to the conclusion that it could be achieved using the following NFA:
-<img src="image.png" alt="NFA for a*ba*">
+<img src="image.PNG" alt="NFA for a*ba*">
  
   <li>I made this based on the last program i made, which was used to generate a DFA.</li>
   <li>The main differences are: 
@@ -21,10 +21,10 @@ First of all, some of my classmates where asking me questions about how i was do
 Appart from that, the biggest issue i had while writting this code was determining how to distribute the values in the table for it to make sense 
 since my automata only has 2 states, this didn't take long to solve.
 the distribution i used was this one:
-/------------\
-| 0 | 1  | 2 |
-| 1 | 2  | 2 |
-\---|----|---/
+<li>/------------\
+<li>| 0 | 1  | 2 |
+<li>| 1 | 2  | 2 |
+<li>\---|----|---/
 
 The logic behind that is that while the characters are a caracter will return a 0 which indicates the first row of values,
 and the only way to invalidate the string from the beggining is to use an invalid character, that isn't a nor b, which makes caracter return a 2, with the state being 0 during the first part of the execution, it's 0 for an a, 1 for a b (which advances to the next state) and 2 for any invalid character.
