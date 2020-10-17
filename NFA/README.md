@@ -1,4 +1,4 @@
-## Deterministic Finite Automata
+## Non Deterministic Finite Automata
 ### (Last updated: 16-10-2020)
 The objective of the programm is to generate a NFA which allows to please the regular expression a*ba*
 To my understanding, a*ba* means that there can be any number of a's and then a b, followed by any number of a's afterwards.
