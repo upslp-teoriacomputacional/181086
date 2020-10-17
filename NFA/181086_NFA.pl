@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 #/-----------------------------------------------\
-#| 181086_conjuntos.pl                           |
+#| 181086_NFA.pl                                 |
 #| Rodrigo Alejandro Ortiz Muñiz                 |
 #| Universidad Politécnica de San Luis Potosí	 |
 #| Profesor: Juan Carlos Gonzáles Ibarra         |
