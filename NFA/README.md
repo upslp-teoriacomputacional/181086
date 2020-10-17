@@ -27,7 +27,7 @@ the distribution i used was this one:
 <p>| 1 | 2  | 2 |
 
 
-The logic behind that is that while the characters are a caracter will return a 0 which indicates the first row of values,
+The logic behind that is that while the characters are a's, caracter will return a 0 which indicates the first row of values,
 and the only way to invalidate the string from the beggining is to use an invalid character, that isn't a nor b, which makes caracter return a 2, with the state being 0 during the first part of the execution, it's 0 for an a, 1 for a b (which advances to the next state) and 2 for any invalid character.
 Since 1 advances to the next state, in state 1 only a's are permited, because in order to leave state 0 a b was needed. This way we can use any number of a's, followed by a b, followed by any other number of a's.
 
