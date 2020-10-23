@@ -16,7 +16,7 @@ In this program, a string, which in this case is 'int result = 100;', is going t
 
 #### using more complex regex patterns:
 
-you can combine some of the other patterns to make the program check if a string contains a more specific set of characters
+you can combine some of the other patterns to make the program check if a string contains a more specific set of characters,
 for instance: 
 
 ```perl
