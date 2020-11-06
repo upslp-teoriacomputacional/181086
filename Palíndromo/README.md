@@ -34,6 +34,9 @@ if($last eq $recipiente){
 	print("\n- La cadena ingresada NO es un palindromo");
 }
 ```
+As noted, this code is the first version of the second half of the program.
+It does almost the same, I only used it as my own handmade guide to what the program should do in its final state
+
 #### Other issues
 I found that when you ask for an input on perl, say, for a string, the newline character actually makes it into the string.
 This was causing me a lot of issues when comparing strings. The solution is to use chomp
