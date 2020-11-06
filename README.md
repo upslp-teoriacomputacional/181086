@@ -1,59 +1,168 @@
-## Deterministic Finite Automata
-### (Last updated: 05-10-2020)
-The objective of the programm is to generate a simple DFA, in which only a string consisting of a number from 0 to 9, an operator such as +, -, *, or / and another digit from 0 to 9, is valid. This is made possible because of the matching operators avaliable on Perl.
+# Instructions
+1. Program in the assigned programming language (F #, Perl, Rust)
+2. The programs are located in the (source_code) folder.
+3. The code must be compiled on any operating system.
+4. The code is uploaded at https://github.com/upslp-teoriacomputacional/matricula
+5. Example. 00180864_sets. go
+6. The program will be evaluated according to the rubric attached.
+7. The evidence of the developed program is the template of the commented source code.
+8. You can also show the operation of the programs in the beginning or term of class before the deadline.
+
+## Rubric
+---
+#### Functionality:
+The program works correctly and all the input variables are validated.
+#### Logic reasoning:
+It is a very refined compact code.
+#### Code structuring:
+If you use indentation, spaces and line spacing that gives greater clarity.
+#### Documentation:
+The presentation includes the name, surname, major, name of the specialty professor, name of the institution and enrollment, well-defined objectives documented and parts of the well-documented code.
+---
+
+### Help -?
+#### <li><em>Programming Languages doc comments.</em>
+
+##### <a href = "https://fsharp.org/learn/">writing F# comments</a>.
 
 
-#### Program to generate a DFA 
-  <li>In this code we start by declaring two global variables, this are necesary due to the nature of what we're doing.</li>
-  <li>We have four subroutines: 
-	<ul> <li>caracter: this subroutine determines the value of the variable simbolo, and wether or not the character sent is a digit or an operator</li>
-		<li> encabezado: it only prints on screen the upper part of the table</li>
-		<li> contenido: it prints the value of each variable to fill the table</li>
-		<li> body: prints lines to make the table prettier</li>
-	</ul>
-  </li>  
-  
+##### <a href = "https://perldoc.perl.org/perl.html"> writing Perl comments</a>.
 
-#### using match in perl:
 
-Truth be told, this was one of the hardest programs i've made, not because is complex, but because all the information about the proper syntax to use the match operator in perl and its options and modifiers is confusing to the extreme. 
-
-even though the official site says that you need to use something like
-```perl
-$character =~ m/[0-9]/
-```
-
-what you actually need to use is 
-
-```perl
-$character =~ m/^[0-9]*$/
-```
-which one can only guess by experimenting using each of the modifiers known to man, such as p, m, d, s, ^ and so on.
-
-That doesn't come close to the absoute horror that is understanding the way metacharacters work, since + is a metacharacter if we use 
-```perl
-$character =~ /+/
-```
-the program wont know what we're trying to say, because + is used in other ways, so we need to add a \ before
-```perl
-$character =~ /\+/
-```
-which can get really confusing when you add | to represent OR and several other operators
-```perl
-$character =~ /\+|\-|\*|\//
-```
-
-Using the match operator properly was by far the greatest challenge in the development of this code.
+##### <a href = "https://www.rust-lang.org/learn"> writing Rust comments</a>.
 
 
 
-## Information
+### Writing Clear Code
 
-Universidad Politécnica de San Luis Potosí
-Written by: Rodrigo Alejandro Ortiz Muñiz - 181086
-Professor: Juan Carlos Gonzáles Ibarra
-Assignature: Teoría computacional.
+The overarching goal when writing code is to make it easy to read and to understand. Well-written programs are easier to debug, easier to maintain, and have 
+fewer errors. Writing a program is a lot like writing an essay. When writing an essay, your message is more convincing when it is accompanied by proper grammar and punctuation. When writing computer programs, you should follow the same principle. It is even more important when programming since someone may be assigned to maintain and support your code for long periods of time. You will appreciate the importance of good style when it is your task to understand and maintain someone else's code!
+
+#### Commenting
+
+Example
+<table>
+<TR><TD><pre>
+/*---------------------------------------------------------
+ *  Here is a block comment that draws attention
+ *  to itself.
+ *---------------------------------------------------------*/
+</pre></td></tr>
+</table>
+
+<table>
+<TR><TD><pre>
+/* *****************************************************************************
+ *  Name:    Alan Turing
+ *  NetID:   aturing
+ *  Precept: P00
+ *
+ *  Description:  Prints 'Hello, World' to the terminal window.
+ *                By tradition, this is everyone's first program.
+ *                Prof. Brian Kernighan initiated this tradition in 1974.
+ *
+ *  Written:       5/03/1997
+ *  Last updated:  8/22/2018
+ *
+ *  % python 3 HelloWorld.python
+ *  % pyton HelloWorld
+ *  Hello, World
+ *
+ **************************************************************************** */
+</pre></td></tr>
+</table>
 
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+<p><li> Comment every important variable name (including 
+all instance variables).
+
+
+<table>
+<TR><TD><pre>
+private double rx, ry;    //  position
+private double q;         //  charge
+</pre></td></tr>
+</table>
+
+If you prefer, you may use
+<a href = "https://en.wikipedia.org/wiki/Structured_programming">doc comments</a>.
+
+
+<table>
+<TR><TD><pre>
+public static void main(String[] args) { 
+   boolean nesting = true;
+   /* /* */ nesting = false; // */ 
+   System.out.println(nesting);
+} 
+</pre></td></tr>
+</table>
+
+
+<table>
+<TR><TD><pre>
+a*x + b
+</pre></td></tr>
+</table>
+
+
+<table>
+<TR><TD><pre>
+for(int i=0;i&lt;n;i++)    vs.      for (int i = 0; i < n; i++)
+</pre></td></tr>
+</table>
+
+
+<table>
+<TR><TD><pre>
+    //This comment has no space           //  This comment has two 
+    //after the delimiter and is          //  spaces after the delimiter
+    //difficult to read.                  //  and is easier to read.
+</pre></td></tr>
+</table>
+
+
+<table>
+<TR><TD><pre>
+int n      = Integer.parseInt(args[0]);      //  size of population
+int trials = Integer.parseInt(args[1]);      //  number of trials
+</pre></td></tr>
+</table>
+
+
+<table>
+<TR><TD><pre>
+//  K&R style indenting                   
+public static void  main(String[] args) {
+    System.out.println("Hello, World");
+}
+
+//  BSD-Allman style indenting
+public static void main(String[] args)
+{
+    System.out.println("Hello, World");
+}
+</pre></td></tr>
+</table>
+
+
+#### References
+<p><b>A.</b> <a href = "http://www.cs.princeton.edu/~bwk/tpop.webpage">The Practice
+of Programming</a> by Brian W. Kernighan and Rob Pike is a classic.
+
+
+<p><b>A.</b><a href = "http://checkstyle.sourceforge.net/">Checkstyle</a>.
+If you followed our Windows, Mac OS X, or Linux instructions, <em>IntelliJ</em> is configured
+to run Checkstyle automatically while you are editing.
+
+
+<p><b>A.</b><a href = "http://mindprod.com/jgloss/unmain.html">unmaintainable code</a>
+and here's <a href = "http://archive.is/Pn5hH">another</a>.
+
+
+<p></p>
+Don't be afraid of email harvesting, write your email properly and the page will perform programming obfuscation.
+
+<a href="" target="\_blank">@</a> 
+</small>
+</body>
