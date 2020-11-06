@@ -70,34 +70,3 @@ if(length($cadena)>2){
 	print("\n - No tiene sentido analizar una cadena de 2 caracteres o menos");
 }
 print "\n\n";
-
-
-
-
-
-
-
-
-
-
-
-
-#for(my $i=0;$i<$mid-1;$i++){
-			#$inversa=reverse($copia);
-			#$first=chop($inversa);	
-			#$copia=reverse($inversa);
-			#$recipiente.=$first;
-		#}
-		#if(length($cadena)%2==0){
-			#$inversa=reverse($copia);
-			#$first=chop($inversa);	
-			#$copia=reverse($inversa);
-		#}
-		#chomp($copia);
-		#chomp($recipiente);
-		#my $last=reverse($copia);
-		#if($last eq $recipiente){
-			#print("\n- La cadena ingresada SI es un palindromo");
-		#}else{
-			#print("\n- La cadena ingresada NO es un palindromo");
-		#}
