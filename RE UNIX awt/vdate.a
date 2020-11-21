@@ -1,4 +1,8 @@
-#
+# Rodrigo Alejandro Ortiz Muñiz -181086 - UPSLP - Docente: Juan Carlos González Ibarra
+# this program gets the current time and prints it in actual words
+# i had some complications using date, for whatever reason, when used inside the awt script, every value was 0
+# i solved this issue by using strftime() instead
+
 BEGIN {
 	units = "zero one two three four five six seven eight nine"
 	double = "ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen"
