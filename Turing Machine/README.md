@@ -4,7 +4,7 @@ The objective of the programm is to generate a Turing machine to divide two numb
   
   
 
-#### understanding PDA:
+#### Trying to deliver... :
 
 To be completely honest. I had a lot of trouble writing this code. Couldn't find any valid example of how to use perl be able to make a completely usable turing machine, and due to the whole academic charge, homeworks, projects, etc. Couldn't make sure that what i did made any sense or if worked.
 
@@ -15,6 +15,10 @@ same thing with the map function.
 What i did was essentially try to do everything manually. Except it doesn't work with some tapes. I couldn't solve this, and i don't think i have enough time to try to implement a solution.
 
 Since it's not entirely based on the one i was asked to base my work on, i don't know if its valid.
+
+As it might not work entirely i should at least explain what i was going for... 
+I was trying to replicate the whole set of rules using conditional structures moving manually the tape and changing the values i had to change.
+
 
 
 ## Information
