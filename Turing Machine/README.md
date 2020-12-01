@@ -6,7 +6,7 @@ The objective of the programm is to generate a Turing machine to divide two numb
 
 #### Trying to deliver... :
 
-To be completely honest. I had a lot of trouble writing this code. Couldn't find any valid example of how to use perl be able to make a completely usable turing machine, and due to the whole academic charge, homeworks, projects, etc. Couldn't make sure that what i did made any sense or if worked.
+To be completely honest. I had a lot of trouble writing this code. Couldn't find any valid example of how to use perl to be able to make a completely usable turing machine, and due to the whole academic charge, homeworks, projects, etc. Couldn't make sure that what i did made any sense or if worked.
 
 What made this difficult wasn't understanding a turing machine, it was understanding what a python dictionary even was or how to make something similar on perl. Even when the teacher explained a way to me. I still had trouble knowing what to do.
 same thing with the map function. 
